@@ -1,0 +1,290 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: #faf8f6;
+     font-family: 'Inter', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     padding: 2rem 1.5rem;
+     margin: 0;
+ }
+
+ /* Основная секция */
+ .bridal-section {
+     max-width: 1350px;
+     width: 100%;
+     display: grid;
+     grid-template-columns: 1fr 1.1fr;
+     gap: 2.5rem;
+     background: #ffffff;
+     border-radius: 2.5rem;
+     overflow: hidden;
+     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04), 0 10px 30px rgba(0, 0, 0,
+             0.03);
+     transition: all 0.3s ease;
+ }
+
+ /* Левая часть – изображение */
+ .image-panel {
+     position: relative;
+     background: #f3ede8;
+     min-height: 550px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+
+ .image-wrapper {
+     width: 100%;
+     height: 100%;
+     position: relative;
+ }
+
+ .main-photo {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+     transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s;
+     filter: brightness(0.96) contrast(1.02);
+ }
+
+ .image-panel:hover .main-photo {
+     transform: scale(1.03);
+     filter: brightness(1) contrast(1.05);
+ }
+
+ .floating-badge {
+     position: absolute;
+     bottom: 2rem;
+     left: 2rem;
+     background: rgba(255, 255, 255, 0.8);
+     backdrop-filter: blur(16px);
+     -webkit-backdrop-filter: blur(16px);
+     border-radius: 100px;
+     padding: 0.7rem 1.8rem;
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+     display: flex;
+     align-items: center;
+     gap: 0.7rem;
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: 500;
+     font-size: 1.1rem;
+     letter-spacing: 0.04em;
+     color: #3a3335;
+     border: 1px solid rgba(255, 255, 255, 0.7);
+ }
+
+ .floating-badge i {
+     color: #c49b6c;
+     font-size: 1.2rem;
+ }
+
+ /* Правая сторона – контент */
+ .content-panel {
+     padding: 3.5rem 3rem 3.5rem 1.8rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .subtitle {
+     font-family: 'Inter', sans-serif;
+     text-transform: uppercase;
+     letter-spacing: 0.35em;
+     font-size: 0.7rem;
+     font-weight: 500;
+     color: #b28b6f;
+     margin-bottom: 1.2rem;
+ }
+
+ h2 {
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: 500;
+     font-size: 3.4rem;
+     line-height: 1.15;
+     color: #2f2a2c;
+     margin-bottom: 1.5rem;
+     letter-spacing: 0.01em;
+ }
+
+ h2 i {
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: 400;
+     font-style: italic;
+     color: #b28b6f;
+ }
+
+ .description {
+     font-size: 1rem;
+     font-weight: 300;
+     line-height: 1.7;
+     color: #5d5557;
+     margin-bottom: 2.2rem;
+     max-width: 90%;
+ }
+
+ .features-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1.8rem;
+     margin: 1rem 0 2.5rem;
+     padding-right: 0.5rem;
+ }
+
+ .feature-item {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+ }
+
+ .feature-icon {
+     font-size: 1.4rem;
+     color: #c49b6c;
+     margin-bottom: 0.6rem;
+     background: #f9f4ef;
+     width: 48px;
+     height: 48px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     transition: all 0.25s;
+ }
+
+ .feature-item:hover .feature-icon {
+     background: #e9d9cc;
+     transform: translateY(-3px);
+ }
+
+ .feature-item h4 {
+     font-family: 'Cormorant Garamond', serif;
+     font-weight: 600;
+     font-size: 1.2rem;
+     letter-spacing: 0.02em;
+     color: #3a3335;
+     margin-bottom: 0.2rem;
+ }
+
+ .feature-item p {
+     font-size: 0.8rem;
+     font-weight: 300;
+     color: #7b7274;
+     line-height: 1.4;
+ }
+
+ .cta-row {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 1.5rem;
+     margin-top: 0.3rem;
+ }
+
+ .btn-primary {
+     background: #2f2a2c;
+     border: none;
+     color: white;
+     font-family: 'Inter', sans-serif;
+     font-weight: 400;
+     font-size: 0.9rem;
+     letter-spacing: 0.08em;
+     text-transform: uppercase;
+     padding: 1rem 2.5rem;
+     border-radius: 60px;
+     cursor: pointer;
+     background: linear-gradient(135deg, #3a3335 0%, #2f2a2c 100%);
+     box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s ease;
+     display: flex;
+     align-items: center;
+     gap: 0.6rem;
+     border: 1px solid transparent;
+ }
+
+ .btn-primary i {
+     font-size: 0.9rem;
+     transition: transform 0.3s;
+ }
+
+ .btn-primary:hover {
+     background: #1f1b1d;
+     box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+     transform: translateY(-2px);
+ }
+
+ .btn-primary:hover i {
+     transform: translateX(4px);
+ }
+
+ .secondary-link {
+     font-family: 'Cormorant Garamond', serif;
+     font-style: italic;
+     font-size: 1.2rem;
+     color: #5d5557;
+     text-decoration: none;
+     border-bottom: 1px solid #d9cdc0;
+     padding-bottom: 0.15rem;
+     transition: color 0.2s, border-color 0.2s;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.3rem;
+ }
+
+ .secondary-link i {
+     font-size: 0.8rem;
+     color: #b28b6f;
+ }
+
+ .secondary-link:hover {
+     color: #b28b6f;
+     border-bottom-color: #b28b6f;
+ }
+
+ /* Адаптивность */
+ @media (max-width: 950px) {
+     .bridal-section {
+         grid-template-columns: 1fr;
+         gap: 0;
+     }
+
+     .image-panel {
+         min-height: 400px;
+         max-height: 480px;
+     }
+
+     .content-panel {
+         padding: 2.5rem 2rem;
+     }
+
+     h2 {
+         font-size: 2.8rem;
+     }
+ }
+
+ @media (max-width: 550px) {
+     .features-grid {
+         grid-template-columns: 1fr;
+         gap: 1.2rem;
+     }
+
+     .cta-row {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+
+     .content-panel {
+         padding: 2rem 1.5rem;
+     }
+
+     h2 {
+         font-size: 2.3rem;
+     }
+ }
